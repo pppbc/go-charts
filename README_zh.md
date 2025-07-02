@@ -1,5 +1,9 @@
 # go-charts
 
+
+- 折线图新增{c:.3f}保留三位小数
+
+
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vicanso/go-charts/blob/master/LICENSE)
 [![Build Status](https://github.com/vicanso/go-charts/workflows/Test/badge.svg)](https://github.com/vicanso/go-charts/actions)
 
