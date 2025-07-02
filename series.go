@@ -313,6 +313,10 @@ func NewLabelFormatter(seriesNames []string, layout string) LabelFormatter {
 		text := strings.ReplaceAll(layout, "{c}", valueText)
 		text = strings.ReplaceAll(text, "{d}", percentText)
 		text = strings.ReplaceAll(text, "{b}", name)
+		if strings.Contains(layout, "{c:.3f}") {
+			valueText = humanize.FtoaWithDigits(value, 3)
+			text = strings.ReplaceAll(layout, "{c:.3f}", valueText)
+		}
 		return text
 	}
 }
