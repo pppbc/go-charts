@@ -67,6 +67,18 @@ func NewSeriesDataFromValues(values []float64) []SeriesData {
 	return data
 }
 
+// NewSeriesDataFromValuesWithStyle return a series data
+func NewSeriesDataFromValuesWithStyle(values []float64, style Style) []SeriesData {
+	data := make([]SeriesData, len(values))
+	for index, value := range values {
+		data[index] = SeriesData{
+			Value: value,
+			Style: style,
+		}
+	}
+	return data
+}
+
 type SeriesLabel struct {
 	// Data label formatter, which supports string template.
 	// {b}: the name of a data item.
